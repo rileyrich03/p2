@@ -30,14 +30,16 @@
 	}
 </style>
 <script>
-	const gif = document.querySelectorAll('img');
+	const gifs = document.querySelectorAll('img');
+	gifs.forEach(gif => {
+		
+		gif.addEventListener('mouseenter', function() {
+		  	this.style.animationPlayState = 'paused';
+		});
 
-	gif.addEventListener('mouseenter', function() {
-		  this.style.animationPlayState = 'paused';
-	});
-
-	gif.addEventListener('mouseleave', function() {
-		  this.style.animationPlayState = 'running';
+		gif.addEventListener('mouseleave', function() {
+		  	this.style.animationPlayState = 'running';
+		});
 	});
 </script>
 </head>
