@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pause GIF on Hover</title>
+    <style>
+        .gif-container {
+            display: inline-block;
+            position: relative;
+        }
+        .gif-container img {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img id="animatedGif" src="images/monkey.gif" alt="Animated GIF" style="display: none;">
+        <img id="staticImage" src="images/monkey1.png" alt="Static Image">
+    </div>
+
+    <script>
+        const animatedGif = document.getElementById('animatedGif');
+        const staticImage = document.getElementById('staticImage');
+
+        staticImage.addEventListener('mouseover', () => {
+            staticImage.style.display = 'none';
+            animatedGif.style.display = 'block';
+        });
+
+        animatedGif.addEventListener('mouseout', () => {
+            animatedGif.style.display = 'none';
+            staticImage.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

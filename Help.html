@@ -32,7 +32,7 @@
 <script>
 	const gifs = document.querySelectorAll('img');
 	gifs.forEach(gif => {
-		
+		console.log("eachloop");
 		gif.addEventListener('mouseenter', function() {
 		  	this.style.animationPlayState = 'paused';
 			console.log(gif);
