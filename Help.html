@@ -35,10 +35,12 @@
 		
 		gif.addEventListener('mouseenter', function() {
 		  	this.style.animationPlayState = 'paused';
+			console.log(gif);
 		});
 
 		gif.addEventListener('mouseleave', function() {
 		  	this.style.animationPlayState = 'running';
+			console.log(gif);
 		});
 	});
 </script>
