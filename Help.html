@@ -31,6 +31,17 @@
 		float:left;
 	}
 </style>
+<script>
+	const gif = document.querySelector('.gif');
+
+	gif.addEventListener('mouseenter', function() {
+		  this.style.animationPlayState = 'paused';
+	});
+
+	gif.addEventListener('mouseleave', function() {
+		  this.style.animationPlayState = 'running';
+	});
+</script>
 </head>
 
 <body>
@@ -47,6 +58,7 @@
 </p>
 </div>
 <h1>Some of my works</h1>
+
 <div class = "item">
 	<h2>
 		Monkey Gambling
@@ -54,18 +66,8 @@
 	<a href = "Monkey.html">
 		<img id = "monkey" src="images/monkey.gif" alt="Monkey page" class = "gif">
 	</a>
-	<script>
-		const gif = document.querySelector('.gif');
-
-		gif.addEventListener('mouseenter', function() {
-  			this.style.animationPlayState = 'paused';
-		});
-
-		gif.addEventListener('mouseleave', function() {
-  			this.style.animationPlayState = 'running';
-		});
-	</script>
 </div>
+
 <div class = "item">
 	<h2>
 		Item 2
@@ -74,6 +76,7 @@
 		<img id = "item2" src="images/construction.jpg" alt="Under construction image">
 	</a>
 </div>
+
 <div class = "item">
 	<h2>
 		Item 3
@@ -82,6 +85,7 @@
 		<img id = "item2" src="images/construction.jpg" alt="Under construction image">
 	</a>
 </div>
+
 </body>
 
 </html>
