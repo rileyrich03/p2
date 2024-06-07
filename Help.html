@@ -17,9 +17,10 @@
 	div {
 		text-align: center;
 	}
-	.gif {
-		width: 50%;
+	img {
+		width: 40%;
 	}
+
 	.gif:hover {
   		animation-play-state: paused;
 	}
@@ -29,16 +30,14 @@
 	}
 </style>
 <script>
-	const gifs = document.querySelectorAll('.gif');
+	const gif = document.querySelectorAll('img');
 
-	gifs.array.forEach(gif => {
-		gif.addEventListener('mouseenter', function() {
-		  	this.style.animationPlayState = 'paused';
-		});
+	gif.addEventListener('mouseenter', function() {
+		  this.style.animationPlayState = 'paused';
+	});
 
-		gif.addEventListener('mouseleave', function() {
-		  	this.style.animationPlayState = 'running';
-		});
+	gif.addEventListener('mouseleave', function() {
+		  this.style.animationPlayState = 'running';
 	});
 </script>
 </head>
@@ -63,7 +62,7 @@
 		Monkey Gambling
 	</h2>
 	<a href = "Monkey.html">
-		<img id = "monkey" src="images/monkey.gif" alt="Monkey page" class = "gif">
+		<img id = "monkey" src="images/monkey.gif" alt="Monkey page">
 	</a>
 </div>
 
