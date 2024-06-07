@@ -20,6 +20,12 @@
 	img {
 		width: 40%;
 	}
+	.gif {
+		width: 50%;
+	}
+	.gif:hover {
+  		animation-play-state: paused;
+	}
 	.item {
 		width: 50%;
 		float:left;
@@ -46,18 +52,17 @@
 		Monkey Gambling
 	</h2>
 	<a href = "Monkey.html">
-		<img id = "monkey" src="images/monkey1.png" alt="Monkey page image">
+		<img id = "monkey" src="images/monkey.gif" alt="Monkey page" class = "gif">
 	</a>
 	<script>
-		$(function() {
-			$("#monkey").hover(
-				function() {
-					$(this).attr("src", "images/monkey.gif");
-				},
-				function() {
-					$(this).attr("src", "images/monkey1.png");
-				}                         
-			);                  
+		const gif = document.querySelector('.gif');
+
+		gif.addEventListener('mouseenter', function() {
+  			this.style.animationPlayState = 'paused';
+		});
+
+		gif.addEventListener('mouseleave', function() {
+  			this.style.animationPlayState = 'running';
 		});
 	</script>
 </div>
