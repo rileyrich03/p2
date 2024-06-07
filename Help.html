@@ -36,20 +36,7 @@
 		float:left;
 	}
 </style>
-<script>
-	const animatedGif = document.getElementById('monkeyGif');
-    const staticImage = document.getElementById('monkeyStatic');
 
-    staticImage.addEventListener('mouseover', () => {
-        staticImage.style.display = 'none';
-        animatedGif.style.display = 'block';
-    });
-
-    animatedGif.addEventListener('mouseout', () => {
-        animatedGif.style.display = 'none';
-        staticImage.style.display = 'block';
-    });
-</script>
 </head>
 
 <body>
@@ -94,7 +81,20 @@
 		<img id = "item2" src="images/construction.jpg" alt="Under construction image">
 	</a>
 </div>
+<script>
+	const animatedGif = document.getElementById('monkeyGif');
+    const staticImage = document.getElementById('monkeyStatic');
 
+    staticImage.addEventListener('mouseover', () => {
+        staticImage.style.display = 'none';
+        animatedGif.style.display = 'block';
+    });
+
+    animatedGif.addEventListener('mouseout', () => {
+        animatedGif.style.display = 'none';
+        staticImage.style.display = 'block';
+    });
+</script>
 </body>
 
 </html>
