@@ -46,15 +46,27 @@
 		Monkey Gambling
 	</h2>
 	<a href = "Monkey.html">
-		<img src="images/monkey.jpg" alt="Monkey page image">
+		<img id = "monkey" src="images/monkey.png" alt="Monkey page image">
 	</a>
+	<script>
+		$(function() {
+			$("#monkey").hover(
+				function() {
+					$(this).attr("src", "images/monkey.gif");
+				},
+				function() {
+					$(this).attr("src", "images/monkey1.png");
+				}                         
+			);                  
+		});
+	</script>
 </div>
 <div class = "item">
 	<h2>
 		Item 2
 	</h2>
 	<a>
-		<img src="images/construction.jpg" alt="Under construction image">
+		<img id = "item2" src="images/construction.jpg" alt="Under construction image">
 	</a>
 </div>
 <div class = "item">
@@ -62,7 +74,7 @@
 		Item 3
 	</h2>
 	<a>
-		<img src="images/construction.jpg" alt="Under construction image">
+		<img id = "item2" src="images/construction.jpg" alt="Under construction image">
 	</a>
 </div>
 </body>
