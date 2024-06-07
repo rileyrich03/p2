@@ -87,13 +87,13 @@
 	const animatedGif = document.getElementById('monkeyGif');
     const staticImage = document.getElementById('monkeyStatic');
     staticImage.addEventListener('mouseover', () => {
-        staticImage.style.display = 'none';
-        animatedGif.style.display = 'block';
+        animatedGif.style.display = 'inline-block';
+		staticImage.style.display = 'none';
     });
 
     animatedGif.addEventListener('mouseout', () => {
         animatedGif.style.display = 'none';
-        staticImage.style.display = 'block';
+        staticImage.style.display = 'inline-block';
     });
 </script>
 </body>
