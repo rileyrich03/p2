@@ -59,7 +59,7 @@
 		Monkey Gambling
 	</h2>
 	<a href = "Monkey.html">
-		<img id = "monkeyGif" src="images/monkey.gif" alt="Monkey page">
+		<img id = "monkeyGif" src="images/monkey.gif" alt="Monkey page" style="display: none;">
 		<img id = "monkeyStatic" src="images/monkey1.png" alt="Static Image">
 	</a>
 </div>
@@ -84,7 +84,6 @@
 <script>
 	const animatedGif = document.getElementById('monkeyGif');
     const staticImage = document.getElementById('monkeyStatic');
-
     staticImage.addEventListener('mouseover', () => {
         staticImage.style.display = 'none';
         animatedGif.style.display = 'block';
