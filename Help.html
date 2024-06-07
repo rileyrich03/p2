@@ -17,9 +17,6 @@
 	div {
 		text-align: center;
 	}
-	img {
-		width: 40%;
-	}
 	.gif {
 		width: 50%;
 	}
@@ -32,14 +29,16 @@
 	}
 </style>
 <script>
-	const gif = document.querySelector('.gif');
+	const gifs = document.querySelectorAll('.gif');
 
-	gif.addEventListener('mouseenter', function() {
-		  this.style.animationPlayState = 'paused';
-	});
+	gifs.array.forEach(gif => {
+		gif.addEventListener('mouseenter', function() {
+		  	this.style.animationPlayState = 'paused';
+		});
 
-	gif.addEventListener('mouseleave', function() {
-		  this.style.animationPlayState = 'running';
+		gif.addEventListener('mouseleave', function() {
+		  	this.style.animationPlayState = 'running';
+		});
 	});
 </script>
 </head>
