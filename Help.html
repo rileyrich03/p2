@@ -30,19 +30,18 @@
 	}
 </style>
 <script>
-	const gifs = document.querySelectorAll('img');
-	gifs.forEach(gif => {
-		console.log("eachloop");
-		gif.addEventListener('mouseenter', function() {
-		  	this.style.animationPlayState = 'paused';
-			console.log(gif);
-		});
+	const animatedGif = document.getElementById('monkeyGif');
+    const staticImage = document.getElementById('monkeyStatic');
 
-		gif.addEventListener('mouseleave', function() {
-		  	this.style.animationPlayState = 'running';
-			console.log(gif);
-		});
-	});
+    staticImage.addEventListener('mouseover', () => {
+        staticImage.style.display = 'none';
+        animatedGif.style.display = 'block';
+    });
+
+    animatedGif.addEventListener('mouseout', () => {
+        animatedGif.style.display = 'none';
+        staticImage.style.display = 'block';
+    });
 </script>
 </head>
 
@@ -66,7 +65,8 @@
 		Monkey Gambling
 	</h2>
 	<a href = "Monkey.html">
-		<img id = "monkey" src="images/monkey.gif" alt="Monkey page">
+		<img id = "monkeyGif" src="images/monkey.gif" alt="Monkey page">
+		<img id = "monkeyStatic" src="images/monkey1.png" alt="Static Image">
 	</a>
 </div>
 
